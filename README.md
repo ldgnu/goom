@@ -1,57 +1,17 @@
-# GOOM
-DOOM engine written in Go
+# goom (retirado) — ahora es doom-web
 
-![GOOM](/misc/goom.png?raw=true "GOOM")
+El experimento Go + GLFW/OpenGL se jubiló: dependencias de 2019, solo
+escritorio, imposible de llevar a WASM sin reescribirlo entero.
 
-Make sure you have `DOOM1.WAD` in the root dir. Then type `make run` to run GOOM.
+El reemplazo está en `/home/ldgnu/Proyectos/doom-web`:
+DOOM en el navegador (doomgeneric + Emscripten + tus mismos WADs).
 
-# Development Status
+Este directorio conserva los WADs y licencias:
 
-The project is an experiment and is still lacking a lot of
-features, such as shooting, enemy behavior, sound, menus, and more.
+- `DOOM1.WAD` (+ `DOOM1.LICENSE`, shareware)
+- `freedoom1.wad`, `freedoom2.wad` (libres)
+- `*.gwa` (nodos GL generados por glbsp, ya no se usan)
 
-![DEMO](/misc/goom-preview.gif?raw=true "DEMO")
+Backup del código Go retirado (verificado, con SHA256):
 
-# Development Setup
-
-Running `make` will initialize go modules and run the tests.
-
-For testing, it is also useful to run `make test-run`, which starts the game,
-loads the WADs, runs the event loop once, and then exits automatically.
-
-Note that some of the used modules use C-bindings and may show compile warnings.
-Please ignore them.
-
-## Linux
-
-On Arch/Manjaro install `glbsp`
-and setup [TiMidity](https://wiki.archlinux.org/index.php/Timidity#Installation).
-
-On Ubuntu, install the following system packages:
-
-- libxcursor-dev
-- libxrandr-dev
-- libxinerama-dev
-- libxi-dev
-- glbsp
-- timidity
-- libportmidi-dev
-- librtmidi-dev
-
-For other systems, please check the above requirements and use your corresponding packages.
-
-## macOS
-
-On macOS you can install the dependencies with brew:
-
-```bash
-brew install sdl2 sdl2_mixer portaudio portmidi glfw pkg-config
-```
-
-## Windows
-
-TBD
-
-## DOOM1.WAD
-
-This project includes a copy of the [shareware version of DOOM](https://doomwiki.org/wiki/DOOM1.WAD) licensed under the [Original DOOM1 Shareware License](DOOM1.LICENSE).
+- `/home/ldgnu/backups/goom-pre-web-20261011.tar.gz`
